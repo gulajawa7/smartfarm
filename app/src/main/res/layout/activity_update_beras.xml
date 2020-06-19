@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    tools:context=".CRUD.UpdateBeras">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/roun_rect_white"
+        >
+        <!--Teks Info-->
+        <TextView
+            android:id="@+id/txt_input_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_data_beras"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_margin="10dp"/>
+
+        <!--Nomor Beras-->
+
+
+        <!--Nama Beras-->
+        <TextView
+            android:id="@+id/txt_input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_nama_beras"
+            android:inputType="textCapWords"
+            android:maxLines="1"/>
+
+        <!--Jenis Beras-->
+        <TextView
+            android:id="@+id/txt_input_jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jenis_beras"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Tahun Panen-->
+        <TextView
+            android:id="@+id/txt_input_tahun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tahun_panen"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Harga Beras-->
+        <TextView
+            android:id="@+id/txt_input_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/harga_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_harga_beras"
+            android:inputType="numberDecimal"/>
+
+        <!--Deskripsi Beras-->
+        <TextView
+            android:id="@+id/txt_input_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deskripsi_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_deskripsi_beras"
+            android:inputType="text"/>
+
+        <!--Nama Penjual-->
+        <TextView
+            android:id="@+id/txt_input_nama_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_penjual"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_nama_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_nama_penjual"/>
+
+        <!-- kuantitas beras-->
+        <TextView
+            android:id="@+id/txt_input_kuantitas_beras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kuantitas_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_kuantitas_beras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_jumlah_beras"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/txt_input_b_kepala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/butir_kepala"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/b_kepala"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/bk5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="95%"/>
+            <RadioButton
+                android:id="@+id/bk4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="78%"/>
+            <RadioButton
+                android:id="@+id/bk3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="73%"/>
+            <RadioButton
+                android:id="@+id/bk2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60%"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_input_b_patah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/butir_patah"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/b_patah"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/bp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5%"/>
+            <RadioButton
+                android:id="@+id/bp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20%"/>
+            <RadioButton
+                android:id="@+id/bp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25%"/>
+            <RadioButton
+                android:id="@+id/bp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35%"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_input_b_menir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/butir_menir"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/b_menir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/bm5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"/>
+            <RadioButton
+                android:id="@+id/bm4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2%"/>
+            <RadioButton
+                android:id="@+id/bm3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%"/>
+            <RadioButton
+                android:id="@+id/bm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5%"/>
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/txt_input_b_kapur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/butir_kapur"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/b_kapur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/bka5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"/>
+            <RadioButton
+                android:id="@+id/bka4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2%"/>
+            <RadioButton
+                android:id="@+id/bka3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%"/>
+            <RadioButton
+                android:id="@+id/bka2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5%"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_input_b_kuning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/butir_kuning"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/b_kuning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/bku5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"/>
+            <RadioButton
+                android:id="@+id/bku4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2%"/>
+            <RadioButton
+                android:id="@+id/bku3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%"/>
+            <RadioButton
+                android:id="@+id/bku2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5%"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_input_benda_asing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/benda_asing_atau_hama"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/b_asing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/ha5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"/>
+            <RadioButton
+                android:id="@+id/ha4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0,02%"/>
+            <RadioButton
+                android:id="@+id/ha3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0,05%"/>
+            <RadioButton
+                android:id="@+id/ha2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="0,2%"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_input_campuran_dedak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campuran_dedak"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/c_dedak"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/cd5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"/>
+            <RadioButton
+                android:id="@+id/cd4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1%"/>
+            <RadioButton
+                android:id="@+id/cd3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2%"/>
+            <RadioButton
+                android:id="@+id/cd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%"/>
+        </RadioGroup>
+
+        <!--Button Simpan-->
+        <Button
+            android:id="@+id/simpan_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/roun_rect_blue"
+            android:gravity="center"
+            android:text="@string/simpan_data" />
+
+    </LinearLayout>
+
+</ScrollView>

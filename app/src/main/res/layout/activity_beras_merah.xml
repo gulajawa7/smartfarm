@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    tools:context=".Admin.BerasMerah">
+    <FrameLayout
+        android:id="@+id/frame_pict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/merah"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableStart="@drawable/ic_collections_white_18dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="@string/beras_hitam"
+            android:textColor="@color/white"/>
+    </FrameLayout>
+
+    <ListView
+        android:layout_below="@+id/frame_pict"
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+
+</RelativeLayout>

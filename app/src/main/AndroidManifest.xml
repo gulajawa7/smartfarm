@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.perjuangan.smartfarm">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logoround"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logoround"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.perjuangan.smartfarm.Admin.about"></activity>
+        <activity android:name="com.perjuangan.smartfarm.RekomendasiMoora" />
+        <activity
+            android:name="com.perjuangan.smartfarm.Splashscreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice_Hitam" />
+        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice_Merah" />
+        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice_Putih" />
+        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice" />
+        <activity android:name="com.perjuangan.smartfarm.Pembeli.PembeliActivity" />
+        <activity
+            android:name="com.perjuangan.smartfarm.CRUD.InputPenjual"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.perjuangan.smartfarm.MenuInput" />
+        <activity
+            android:name="com.perjuangan.smartfarm.CRUD.UpdateBeras"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.perjuangan.smartfarm.Admin.SeluruhBeras"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.perjuangan.smartfarm.CRUD.LihatBeras"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.perjuangan.smartfarm.CRUD.Input"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.perjuangan.smartfarm.Admin.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.perjuangan.smartfarm.Admin.BerasHitam" />
+        <activity android:name="com.perjuangan.smartfarm.Admin.BerasMerah" />
+        <activity android:name="com.perjuangan.smartfarm.Admin.BerasPutih" />
+        <activity android:name="com.perjuangan.smartfarm.Pembeli.Deskripsi" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <dist:module dist:instant="true" />
+
+</manifest>

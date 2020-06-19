@@ -1,0 +1,87 @@
+<resources>
+
+    <!--Spinner entries-->
+    <array name="type">
+        <item>Beras Putih</item>
+        <item>Beras Merah</item>
+        <item>Beras Hitam</item>
+    </array>
+    <array name="year">
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+    </array>
+
+    <string name="app_name">Smartfarm</string>
+    <string name="welcome_to_smartfarm">Welcome to Smartfarm</string>
+    <string name="introduction_smartfarm"> Aplikasi pertukaran informasi seputar proses jual beli hasil panen di Kabupaten Bantul.
+        Petani dapat memanfaatkan teknologi informasi dan komunikasi untuk mengetahui berbagai informasi dan komunikasi untuk mengetahui informasi tentang proses jual beli hasil panen berupa beras.
+    </string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="seluruh_beras">Semua</string>
+    <string name="beras_putih">Beras Putih</string>
+    <string name="beras_merah">Beras Merah</string>
+    <string name="beras_hitam">Beras Hitam</string>
+    <string name="input_beras">Input Beras</string>
+    <string name="about_app">About</string>
+    <string name="logout">Logout</string>
+    <string name="data_beras">Data Beras</string>
+    <string name="masukkan_alamat_penjual">Masukkan dalam satuan km</string>
+    <string name="jarak_penjual">Jarak Penjual</string>
+    <string name="masukkan_nama_penjual">Masukkan nama penjual</string>
+    <string name="nama_penjual">Nama Penjual</string>
+    <string name="masukkan_deskripsi_beras">Masukkan deskripsi beras</string>
+    <string name="simpan_data">Simpan</string>
+    <string name="deskripsi_beras">Deskripsi Beras</string>
+    <string name="masukkan_harga_beras">Masukkan harga beras</string>
+    <string name="harga_beras">Harga Beras</string>
+    <string name="tahun_panen">Masa Panen</string>
+    <string name="jenis_beras">Jenis Beras</string>
+    <string name="masukkan_nama_beras">Masukkan nama beras</string>
+    <string name="nama_beras">Nama Beras</string>
+
+    <string name="masukkan_nomor_beras">Masukkan Nomor Beras</string>
+
+    <string name="nomor_beras">Nomor Beras</string>
+    <string name="update_data_beras">Update Data Beras</string>
+    <string name="kembali">Kembali</string>
+    <string name="nama">Nama</string>
+    <string name="welcome_text">Selamat datang di smartfarm</string>
+    <string name="Home">Home</string>
+    <string name="discover">Discover</string>
+    <string name="account">Account</string>
+    <string name="title_activity_pembeli">PembeliActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="search_hint">Menu Sehat Apa Hari Ini?</string>
+    <string name="email">Email</string>
+    <string name="input_email">Masukkan Email Anda</string>
+    <string name="password">Password</string>
+    <string name="input_password">Masukkan Password Anda</string>
+    <string name="login">LOGIN</string>
+    <string name="pilih_dari_kategori">Pilih dari kategori</string>
+    <string name="hidup_sehat_cek_beras_organiknya_kak">Hidup sehat? Cek beras organiknya kak!</string>
+    <string name="sort_by_moora">Sort by Moora</string>
+    <string name="about">About SmartFarm</string>
+    <string name="tentang">Aplikasi ini memudahkan dalam proses pertukaran informasi seputar proses jual beli hasil panen di Kabupaten Bantul.
+Petani dapat memanfaatkan teknologi informasi dan komunikasi untuk mengetahui berbagai informasi dan komunikasi untuk mengetahui informasi tentang proses jual beli hasil panen berupa beras.
+Selain petani, aplikasi ini dapat digunakan oleh masyarakat dan para tengkulak beras tanpa harus turun langsung ke lapangan sehingga dapat meningkatkan keberdayaan petani melalui penyiapan informasi pertanian yang tepat waktu dan relevan kepada para petani untuk mendukung keputusan dalam melakukan jual beli hasil panen sehingga dapat meningkatkan produktivitas.
+Aplikasi jual beli  berbasis android ini biasa disebut dengan SMARTFARM, akan memudahkan para petani dan tengkulak untuk menjual dan membeli hasil panen berupa beras secara langsung melalui smartphone kepada penggunannya.
+Aplikasi ini dibuat oleh mahasiswa UPN VETERAN YOGYAKARTA Jurusan Teknik Informatika oleh Nurul Aini (123140049).</string>
+    <string name="masukkan_jumlah_beras">Masukkan Jumlah Beras</string>
+    <string name="kuantitas_beras">Kuantitas Beras ( Dalam Satuan Kwintal )</string>
+    <string name="kuantitas">Kuantitas</string>
+    <string name="nama_gapoktan">Nama Gapoktan</string>
+    <string name="masukkan_nama_gapoktan">Masukkan Nama Gapoktan</string>
+    <string name="butir_kepala">Butir Kepala</string>
+    <string name="butir_patah">Butir Patah</string>
+    <string name="butir_menir">Butir Menir</string>
+    <string name="butir_kapur">Butir Kapur</string>
+    <string name="butir_kuning">Butir Kuning</string>
+    <string name="benda_asing_atau_hama">Benda Asing Atau Hama</string>
+    <string name="campuran_dedak">Campuran Dedak</string>
+
+</resources>
