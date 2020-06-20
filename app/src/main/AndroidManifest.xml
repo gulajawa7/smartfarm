@@ -3,6 +3,16 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.perjuangan.smartfarm">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <dist:module dist:instant="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logoround"
@@ -10,10 +20,26 @@
         android:roundIcon="@drawable/logoround"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.perjuangan.smartfarm.Admin.about"></activity>
-        <activity android:name="com.perjuangan.smartfarm.RekomendasiMoora" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
-            android:name="com.perjuangan.smartfarm.Splashscreen"
+            android:name=".CRUD.MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".Admin.about" />
+        <activity android:name=".RekomendasiMoora" />
+        <activity
+            android:name=".Splashscreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,38 +47,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice_Hitam" />
-        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice_Merah" />
-        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice_Putih" />
-        <activity android:name="com.perjuangan.smartfarm.Pembeli.Discover_Rice" />
-        <activity android:name="com.perjuangan.smartfarm.Pembeli.PembeliActivity" />
+        <activity android:name=".Pembeli.Discover_Rice_Hitam" />
+        <activity android:name=".Pembeli.Discover_Rice_Merah" />
+        <activity android:name=".Pembeli.Discover_Rice_Putih" />
+        <activity android:name=".Pembeli.Discover_Rice" />
+        <activity android:name=".Pembeli.PembeliActivity" />
         <activity
-            android:name="com.perjuangan.smartfarm.CRUD.InputPenjual"
+            android:name=".CRUD.InputPenjual"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="com.perjuangan.smartfarm.MenuInput" />
+        <activity android:name=".MenuInput" />
         <activity
-            android:name="com.perjuangan.smartfarm.CRUD.UpdateBeras"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name="com.perjuangan.smartfarm.Admin.SeluruhBeras"
+            android:name=".CRUD.UpdateBeras"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.perjuangan.smartfarm.CRUD.LihatBeras"
+            android:name=".Admin.SeluruhBeras"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.perjuangan.smartfarm.CRUD.Input"
+            android:name=".CRUD.LihatBeras"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CRUD.Input"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.perjuangan.smartfarm.Admin.MainActivity"
+            android:name=".Admin.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="com.perjuangan.smartfarm.Admin.BerasHitam" />
-        <activity android:name="com.perjuangan.smartfarm.Admin.BerasMerah" />
-        <activity android:name="com.perjuangan.smartfarm.Admin.BerasPutih" />
-        <activity android:name="com.perjuangan.smartfarm.Pembeli.Deskripsi" />
+        <activity android:name=".Admin.BerasHitam" />
+        <activity android:name=".Admin.BerasMerah" />
+        <activity android:name=".Admin.BerasPutih" />
+        <activity android:name=".Pembeli.Deskripsi" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <dist:module dist:instant="true" />
 
 </manifest>
