@@ -168,8 +168,6 @@ public class LihatBeras extends AppCompatActivity implements OnMapReadyCallback 
 	}
 
 	public void updateMap(String latValue, String longValue) {
-		Log.e("testing","testing");
-		Log.e("check", "Checking lat long" + latValue + longValue);
 		LatLng currentCoordinate = new LatLng(Double.parseDouble(latValue), Double.parseDouble(longValue));
 		mMap.addMarker(new MarkerOptions().position(currentCoordinate).title("Current Map"));
 		mMap.moveCamera(CameraUpdateFactory.newLatLng(currentCoordinate));
