@@ -26,7 +26,7 @@
                 android:layout_marginTop="10dp"/>
         </RelativeLayout>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,7 +56,7 @@
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:text="@string/introduction_smartfarm"/>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--Rekomendasi beras-->
         <TextView
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/brsputih"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
@@ -105,9 +105,9 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/brsmerah"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
@@ -136,9 +136,9 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/brshitam"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
@@ -167,7 +167,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
 
@@ -197,7 +197,7 @@
             <!-- Row 1 -->
 
             <!-- Column 1 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_pembeli_putih"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -234,10 +234,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- Column 2 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_pembeli_merah"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -274,13 +274,13 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!-- Row 2 -->
 
             <!-- Column 1 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_pembeli_hitam"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -316,10 +316,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- Column 2 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_pembeli_semua"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -355,7 +355,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </GridLayout>
 

@@ -364,6 +364,21 @@
                     android:text="3%"/>
             </RadioGroup>
 
+
+            <EditText
+                android:id="@+id/edt_input_lat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_text_lat_hint"
+                android:inputType="numberDecimal|numberSigned"/>
+
+            <EditText
+                android:id="@+id/edt_input_long"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_text_long_hint"
+                android:inputType="numberDecimal|numberSigned"/>
+
             <!--Button Simpan-->
             <Button
                 android:id="@+id/simpan_input"

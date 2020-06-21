@@ -83,5 +83,8 @@ Aplikasi ini dibuat oleh mahasiswa UPN VETERAN YOGYAKARTA Jurusan Teknik Informa
     <string name="butir_kuning">Butir Kuning</string>
     <string name="benda_asing_atau_hama">Benda Asing Atau Hama</string>
     <string name="campuran_dedak">Campuran Dedak</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="input_text_lat_hint">Latitude</string>
+    <string name="input_text_long_hint">Longitude</string>
 
 </resources>

@@ -2,7 +2,7 @@ package com.perjuangan.smartfarm.CRUD;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +26,7 @@ public class Input extends AppCompatActivity {
 	DataHelper dbHelper;
 	RadioGroup b_kepala, b_patah, b_menir, b_kapur, b_kuning, b_asing, c_dedak;
 	RadioButton bk1, bk2, bk3, bk4, bp1, bp2, bp3, bp4, bm1, bm2, bm3;
-	EditText name, price, description, penjual, kuantitas;
+	EditText name, price, description, penjual, kuantitas, input_lat, input_long;
 	Spinner jenis, year;
 	Button save;
 
@@ -41,6 +41,8 @@ public class Input extends AppCompatActivity {
 		description = (EditText)findViewById(R.id. edt_input_deskripsi);
 		penjual = (EditText)findViewById(R.id.edt_input_nama_gapoktan);
 		kuantitas = (EditText)findViewById(R.id.edt_input_kuantitas_beras);
+		input_lat = (EditText) findViewById(R.id.edt_input_lat);
+		input_long = (EditText) findViewById(R.id.edt_input_long);
 
 //		Radio Group
         b_kepala = findViewById(R.id.b_kepala);
@@ -119,6 +121,9 @@ public class Input extends AppCompatActivity {
 				String deskripsi		= description.getText().toString();
 				String gapoktan			= penjual.getText().toString();
 				String kuantitasberas	= kuantitas.getText().toString();
+				String latValue = input_lat.getText().toString();
+				String longValue = input_long.getText().toString();
+
                 //membuat variabel penampung pilihan radio button
 				int selectbk			= b_kepala.getCheckedRadioButtonId();
 				int selectbp			= b_patah.getCheckedRadioButtonId();
@@ -204,7 +209,7 @@ public class Input extends AppCompatActivity {
 
 			    // insert data ke database
 				SQLiteDatabase db = dbHelper.getWritableDatabase();
-				String sql		= "INSERT INTO gapoktan ( `nama_beras`,`jenis_beras`,`tahun_panen`,`harga_panen`,`deskripsi`,`gapoktan`,`kuantitas`, `butir_kepala`, `butir_patah`, `butir_menir`, `butir_kapur`, `butir_kuning`, `hama_penyakit`, `dedak_bekatul`)" +
+				String sql		= "INSERT INTO gapoktan ( `nama_beras`,`jenis_beras`,`tahun_panen`,`harga_panen`,`deskripsi`,`gapoktan`,`kuantitas`, `butir_kepala`, `butir_patah`, `butir_menir`, `butir_kapur`, `butir_kuning`, `hama_penyakit`, `dedak_bekatul`, `lat`, `long`)" +
 						" VALUES ('"+ namaberas +
 						"','" + jenisberas +
 						"','" + tahunpanen +
@@ -213,6 +218,8 @@ public class Input extends AppCompatActivity {
 						"','" + gapoktan +
 						"','" + kuantitasberas +
 						"','" + butirkepala + "','" + butirpecah + "','" + butirmenir + "','" + butirkapur + "','" + butirkuning + "','" + hama + "','" + campurancempedak +
+						"','" + latValue +
+						"','" + longValue +
 						"')";
 				Log.d("SQL",sql);
 				db.execSQL(sql);

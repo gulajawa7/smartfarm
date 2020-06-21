@@ -8,329 +8,343 @@
     android:padding="@dimen/padding"
     tools:context=".CRUD.LihatBeras">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:id="@+id/nomor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_nomor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nomor_beras" />
-
-            <TextView
-                android:id="@+id/txt_detail_no"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:text="Nomor" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_nama"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_nama"
-                android:text="@string/nama_beras" />
-
-            <TextView
-                android:id="@+id/txt_detail_nama"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="66dp"
-                android:text="Nama" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/jenis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_jenis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_jenis"
-                android:text="@string/jenis_beras" />
-
-            <TextView
-                android:id="@+id/txt_detail_jenis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="69dp"
-                android:text="Jenis" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/deskripsi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_deskripsi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_deskripsi"
-                android:text="@string/deskripsi_beras" />
-
-            <TextView
-                android:id="@+id/txt_detail_deskripsi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="43dp"
-                android:text="Deskripsi" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/penjual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_penjual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_penjual"
-                android:text="@string/nama_penjual" />
-
-            <TextView
-                android:id="@+id/txt_detail_penjual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="53dp"
-                android:text="Penjual" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/jarak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_kuantitas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_kuantitas_bers"
-                android:text="@string/kuantitas_beras" />
-
-            <TextView
-                android:id="@+id/txt_kuantitas_bers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:text="@string/kuantitas" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_harga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_harga"
-                android:text="@string/harga_beras" />
-
-            <TextView
-                android:id="@+id/txt_detail_harga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:text="Harga" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/panen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/Txt_tahun"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_tahun"
-                android:text="Tahun Panen" />
-
-            <TextView
-                android:id="@+id/txt_detail_tahun"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="Tahun Panen" />
-        </LinearLayout>
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/nomor"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_tahun"
-                android:text="Butir Kepala" />
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txt_bk"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/Txt_nomor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nomor_beras" />
+
+                <TextView
+                    android:id="@+id/txt_detail_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:text="Nomor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="" />
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_nama"
+                    android:text="@string/nama_beras" />
+
+                <TextView
+                    android:id="@+id/txt_detail_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="66dp"
+                    android:text="Nama" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jenis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_jenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_jenis"
+                    android:text="@string/jenis_beras" />
+
+                <TextView
+                    android:id="@+id/txt_detail_jenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="69dp"
+                    android:text="Jenis" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_deskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_deskripsi"
+                    android:text="@string/deskripsi_beras" />
+
+                <TextView
+                    android:id="@+id/txt_detail_deskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="43dp"
+                    android:text="Deskripsi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/penjual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_penjual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_penjual"
+                    android:text="@string/nama_penjual" />
+
+                <TextView
+                    android:id="@+id/txt_detail_penjual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="53dp"
+                    android:text="Penjual" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jarak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_kuantitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_kuantitas_bers"
+                    android:text="@string/kuantitas_beras" />
+
+                <TextView
+                    android:id="@+id/txt_kuantitas_bers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/kuantitas" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_harga"
+                    android:text="@string/harga_beras" />
+
+                <TextView
+                    android:id="@+id/txt_detail_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:text="Harga" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_tahun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_tahun"
+                    android:text="Tahun Panen" />
+
+                <TextView
+                    android:id="@+id/txt_detail_tahun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="Tahun Panen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_tahun"
+                    android:text="Butir Kepala" />
+
+                <TextView
+                    android:id="@+id/txt_bk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_tahun"
+                    android:text="Butir Patah" />
+
+                <TextView
+                    android:id="@+id/txt_bp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Butir Menir" />
+
+                <TextView
+                    android:id="@+id/txt_bm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_tahun"
+                    android:text="Butir Kapur" />
+
+                <TextView
+                    android:id="@+id/txt_bka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_tahun"
+                    android:text="Butir Kapur" />
+
+                <TextView
+                    android:id="@+id/txt_bku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_tahun"
+                    android:text="Benda Asing (Hama)" />
+
+                <TextView
+                    android:id="@+id/txt_ha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_detail_tahun"
+                    android:text="Campuran Dedak" />
+
+                <TextView
+                    android:id="@+id/txt_cd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="15dp"
+                tools:context="com.perjuangan.smartfarm.CRUD.MapsActivity" />
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/kembali"
+                style="?android:attr/borderlessButtonStyle"
+                android:drawableStart="@drawable/ic_arrow"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_tahun"
-                android:text="Butir Patah" />
-
-            <TextView
-                android:id="@+id/txt_bp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Butir Menir" />
-
-            <TextView
-                android:id="@+id/txt_bm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_tahun"
-                android:text="Butir Kapur" />
-
-            <TextView
-                android:id="@+id/txt_bka"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_tahun"
-                android:text="Butir Kapur" />
-
-            <TextView
-                android:id="@+id/txt_bku"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_tahun"
-                android:text="Benda Asing (Hama)" />
-
-            <TextView
-                android:id="@+id/txt_ha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt_detail_tahun"
-                android:text="Campuran Dedak" />
-
-            <TextView
-                android:id="@+id/txt_cd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
-                android:text="" />
-        </LinearLayout>
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="@string/kembali"
-            style="?android:attr/borderlessButtonStyle"
-            android:drawableStart="@drawable/ic_arrow"/>
-    </LinearLayout>
-
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

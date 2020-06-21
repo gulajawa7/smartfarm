@@ -2,26 +2,36 @@ package com.perjuangan.smartfarm.CRUD;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.perjuangan.smartfarm.Database.DataHelper;
 import com.perjuangan.smartfarm.R;
 
-public class LihatBeras extends AppCompatActivity {
+public class LihatBeras extends AppCompatActivity implements OnMapReadyCallback {
 	protected Cursor cursor;
 	DataHelper dbHelper;
 	TextView no, name, price, description, penjual, kuantitas, type, year, bk, bka, bku, bm, bp, ha, cd;
 	Button back;
+	private GoogleMap mMap;
+	private String latValue, longValue;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lihat_beras);
+
+		initMap();
 
 		dbHelper = new DataHelper(this);
 		no = findViewById(R.id.txt_detail_no);
@@ -62,6 +72,8 @@ public class LihatBeras extends AppCompatActivity {
 			String sbku		= cursor.getString(12);
 			String shama	= cursor.getString(13);
 			String scd	 	= cursor.getString(14);
+			latValue = cursor.getString(15);
+			longValue = cursor.getString(16);
 
 			Log.d("Hasil", sbk+sbp+sbm+sbka+sbku+shama+scd);
 
@@ -141,4 +153,25 @@ public class LihatBeras extends AppCompatActivity {
 		});
 
 	}
+
+	public void initMap() {
+		// Obtain the SupportMapFragment and get notified when the map is ready to be used.
+		SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+				.findFragmentById(R.id.map);
+		if(mapFragment != null) mapFragment.getMapAsync(this);
+	}
+
+	@Override
+	public void onMapReady(GoogleMap googleMap) {
+		mMap = googleMap;
+		updateMap(latValue, longValue);
+	}
+
+	public void updateMap(String latValue, String longValue) {
+		LatLng currentCoordinate = new LatLng(Double.parseDouble(latValue), Double.parseDouble(longValue));
+		mMap.addMarker(new MarkerOptions().position(currentCoordinate).title("Current Map"));
+		mMap.moveCamera(CameraUpdateFactory.newLatLng(currentCoordinate));
+		mMap.animateCamera( CameraUpdateFactory.zoomTo( 17.0f ) );
+	}
+
 }
